@@ -198,7 +198,7 @@ The report also incorporates:
 
 Watch the complete Power BI dashboard walkthrough demonstrating how the analysis moves from executive-level financial performance into pricing, product, territory, reseller, and product-level diagnostic analysis.
 
-▶️ **[Watch Dashboard Walkthrough on YouTube](ADD-YOUR-YOUTUBE-LINK-HERE)**
+▶️ **[Watch Dashboard Walkthrough on YouTube](https://youtu.be/8-vS-T1pzLs)**
 
 ---
 
