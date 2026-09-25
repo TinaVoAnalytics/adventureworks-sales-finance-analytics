@@ -1,38 +1,54 @@
-# AdventureWorks Sales Finance & Pricing Analytics
+# AdventureWorks Sales Finance & Profitability Analytics
 
-**Portfolio Project:** Sales Finance & Pricing Analytics | SQL Server + Excel
+**End-to-End Portfolio Project | SQL Server • Excel • Power Query • Power BI • DAX**
+
+**Focus:** Revenue • Pricing • Profitability • Margin Risk • Executive Decision Support
+
+---
+
+## 📌 Project Overview
+
+This project is an end-to-end sales finance and profitability analysis using the AdventureWorks reseller sales dataset.
+
+I used **SQL Server, Excel, Power Query, Power BI, and DAX** to investigate a central business problem: strong sales performance was not consistently translating into profitable growth.
+
+The analysis moves from data exploration and financial KPI development to product, pricing, promotion, territory, reseller, and profitability diagnostics. Excel extends the analysis through variance and price-cost sensitivity modeling, while Power BI provides an interactive management dashboard for executive monitoring and deeper investigation.
 
 **Dataset:** AdventureWorksDW2022
 
-## Project Overview
+---
 
-This portfolio project analyzes AdventureWorks reseller sales data to evaluate sales performance, profitability, product trends, reseller performance, and regional performance. The project combines SQL Server, Excel, Power BI, and AI-assisted analysis to transform raw business data into actionable insights for decision-making.
+## 🎯 Business Problem
 
-## Business Objectives
+AdventureWorks generated substantial reseller sales revenue, but higher sales were not consistently translating into stronger profitability.
 
-The analysis is designed to answer key business questions, including:
+On a comparable **January–November basis**, 2013 revenue increased **31.52%** compared with the same period in 2012, while gross profit deteriorated by approximately **$1.59 million** and gross margin declined by **5.77 percentage points**.
 
-- How are revenue, cost, gross profit, and gross margin performing?
-- Which products and product categories generate the most revenue and profit?
-- Which resellers contribute the most to overall sales performance?
-- Which sales territories and regions perform strongest?
-- How does sales performance change over time?
-- Are products being sold above, at, or below standard cost?
-- Where are the major opportunities for improving sales and profitability?
+### Central Business Question
 
-## Tools & Technologies
+> **Why was higher sales performance not translating into stronger profitability, and where was the profitability deterioration concentrated?**
 
-- **SQL Server / SSMS** — data exploration, joins, aggregation, KPI calculations, and business analysis
-- **Excel** — additional analysis, validation, PivotTables, and reporting
-- **Power BI** — data modeling, DAX measures, interactive dashboards, and business intelligence
-- **AI-Assisted Analysis** — query development support, analytical interpretation, validation, and business insight development
+---
 
-## Dataset
+## 🔎 Analysis Objectives
 
-This project uses the **AdventureWorksDW2022** data warehouse.
+- Evaluate revenue, gross profit, and gross margin performance.
+- Identify product categories and subcategories associated with profitability deterioration.
+- Analyze below-cost pricing exposure.
+- Test whether promotions and discounts sufficiently explain the losses.
+- Compare profitability across territories and resellers.
+- Evaluate hypothetical price and cost sensitivity scenarios.
+- Develop management-focused KPIs and exception monitoring.
 
-The analysis primarily uses `FactResellerSales` together with dimension tables including:
+---
 
+## 🗃️ Dataset & Analytical Model
+
+The project uses the **AdventureWorksDW2022** data warehouse, with `FactResellerSales` as the primary transactional fact table.
+
+### Core Tables
+
+- `FactResellerSales`
 - `DimDate`
 - `DimProduct`
 - `DimProductSubcategory`
@@ -40,48 +56,229 @@ The analysis primarily uses `FactResellerSales` together with dimension tables i
 - `DimReseller`
 - `DimSalesTerritory`
 
-## SQL Analysis
+### Dataset Profile
 
-SQL is used to transform and analyze reseller sales data through:
+- **60,855** sales lines
+- **3,796** orders
+- **214,378** units sold
+- **$80.45M** total revenue
+- Date range: **December 29, 2010 – November 29, 2013**
 
-- Multi-table joins
-- Aggregate functions
-- `GROUP BY`
-- `CASE` expressions
-- Revenue and cost analysis
-- Gross profit and gross margin calculations
-- Product and category analysis
-- Reseller analysis
-- Geographic and sales territory analysis
-- Time-based sales analysis
-- Price-versus-standard-cost analysis
-
-## Key KPIs
-
-The project evaluates business metrics such as:
-
-- Total Revenue
-- Total Product Cost
-- Gross Profit
-- Gross Margin %
-- Order Quantity
-- Sales Volume
-- Reseller Performance
-- Product Performance
-- Regional Performance
-
-## Power BI Dashboard
-
-An interactive Power BI dashboard will be developed to communicate major KPIs, trends, business insights, and recommendations to decision-makers.
-
-## Business Insights & Recommendations
-
-The final analysis will identify major sales and profitability trends and translate those findings into practical business recommendations.
-
-## Skills Demonstrated
-
-`SQL` • `SQL Server` • `SSMS` • `Data Analysis` • `Data Cleaning` • `Data Modeling` • `Excel` • `Power BI` • `DAX` • `Data Visualization` • `KPI Analysis` • `Business Intelligence` • `AI-Assisted Analysis`
+> **Comparable-Period Note:** The available 2013 reseller-sales data ends in November. Therefore, January–November periods were used for the primary 2012–2013 year-over-year diagnostic comparison.
 
 ---
 
-**Portfolio Project by Tina Vo**
+## 🛠️ Tools & Technologies
+
+| Technology | Application |
+|---|---|
+| **SQL Server / SSMS** | Data exploration, joins, validation, KPI calculations, and profitability diagnostics |
+| **Excel** | Financial modeling, variance analysis, sensitivity analysis, and exception monitoring |
+| **Power Query** | Data preparation and data-quality validation |
+| **Power BI** | Interactive management dashboards and diagnostic analysis |
+| **DAX** | Financial KPIs, comparable-period measures, and dynamic analysis |
+| **AI-Assisted Analysis** | Development support, analytical validation, interpretation, and workflow refinement |
+
+---
+
+## ⚙️ End-to-End Analytical Workflow
+
+**Data Exploration & Validation**  
+↓  
+**Financial KPI Development**  
+↓  
+**Profitability Diagnosis**  
+↓  
+**Product, Pricing & Promotion Investigation**  
+↓  
+**Territory & Reseller Investigation**  
+↓  
+**Excel Financial & Sensitivity Modeling**  
+↓  
+**Power BI Executive & Diagnostic Dashboard**  
+↓  
+**Management Decision Support**
+
+---
+
+## 🗄️ SQL — Profitability Investigation
+
+SQL Server was used to establish the analytical foundation and progressively investigate the profitability problem.
+
+### SQL Analysis Scripts
+
+1. `01_Data_Exploration_and_Model.sql`
+2. `02_Sales_and_Profitability_KPIs.sql`
+3. `03_Product_and_Category_Profitability.sql`
+4. `04_Price_vs_Cost_Analysis.sql`
+5. `05_Reseller_and_Territory_Performance.sql`
+6. `06_Promotion_and_Time_Trend_Analysis.sql`
+7. `07_Volume_and_Exception_Analysis.sql`
+8. `08_Executive_Summary.sql`
+
+### SQL Skills Demonstrated
+
+- Multi-table joins
+- `CASE` expressions
+- `GROUP BY`
+- Aggregate functions
+- Fact/dimension analysis
+- Financial KPI calculations
+- Product/category profitability analysis
+- Price-versus-cost analysis
+- Promotion and time-trend analysis
+- Reseller and territory analysis
+- Exception analysis
+- Data validation
+
+📂 **View the `/sql` folder for the complete analysis scripts.**
+
+---
+
+## 📗 Excel — Financial Modeling & Sensitivity Analysis
+
+Excel was used to extend the SQL findings into financial modeling, variance analysis, pricing diagnostics, and scenario evaluation.
+
+### Analytical Components
+
+- Pricing Effectiveness
+- Weekly Pricing Monitor
+- Discount & Margin Model
+- Performance Variance Analysis
+- Price-Cost Sensitivity Analysis
+- Two-Variable Data Tables
+- Goal Seek
+- Pricing Exception Watchlist
+- Executive Dashboard
+
+The sensitivity analysis evaluates how hypothetical changes in selling price and product cost could affect gross margin.
+
+> **Important:** Scenario outputs are analytical decision-support tools and should not be interpreted as direct pricing recommendations.
+
+---
+
+## 📊 Power BI — Management Decision-Support Dashboard
+
+The Power BI solution translates the financial analysis into four primary management views.
+
+### 1. Executive Overview
+
+Provides an executive-level view of revenue, gross profit, gross margin, and comparable-period financial performance.
+
+### 2. Pricing & Profitability
+
+Evaluates pricing effectiveness, below-cost exposure, gross margin, and promotion performance.
+
+### 3. Territory & Reseller
+
+Compares geographic and reseller performance across both revenue and profitability measures.
+
+### 4. Product Profitability
+
+Moves from category to subcategory and individual-product analysis to identify where profitability pressure is concentrated.
+
+### Interactive Analysis
+
+The report also incorporates:
+
+- DAX financial measures
+- Comparable-period analysis
+- Slicers and filtering
+- Bookmarks and navigation
+- Field parameters
+- Dynamic metric selection
+- Dynamic titles
+- Conditional formatting
+- Report-page tooltips
+- Drill-through analysis
+
+---
+
+## 🎥 Dashboard Walkthrough
+
+Watch the complete Power BI dashboard walkthrough demonstrating how the analysis moves from executive-level financial performance into pricing, product, territory, reseller, and product-level diagnostic analysis.
+
+▶️ **[Watch Dashboard Walkthrough on YouTube](ADD-YOUR-YOUTUBE-LINK-HERE)**
+
+---
+
+## 🔍 Key Findings & Business Insights
+
+- **Revenue growth did not translate into profitable growth.** Jan–Nov 2013 revenue increased **31.52%**, while gross profit deteriorated by approximately **$1.59M** and gross margin declined by **5.77 percentage points**.
+
+- **Bikes were the dominant category-level contributor** to the profitability deterioration.
+
+- **Touring Bikes were the largest subcategory-level contributor** to the deterioration within Bikes, while Road Bikes were also unprofitable.
+
+- **40.27% of 2013 sales lines were below cost**, identifying below-cost exposure as a significant profitability risk signal.
+
+- Road and Touring Bikes remained unprofitable within the **No Discount** population, indicating that promotional activity alone did not explain the profitability deterioration.
+
+- Profitability varied across **territories, resellers, and individual products**, supporting targeted investigation rather than relying on revenue alone as a measure of performance.
+
+---
+
+## 💡 Management Takeaway
+
+Revenue growth alone was not a sufficient indicator of business performance. The analysis showed that profitability deterioration was concentrated rather than random, with **Bikes—particularly Touring Bikes—emerging as a major area for deeper investigation**.
+
+Below-cost exposure represented an additional profitability risk signal, while the promotion analysis showed that discounts alone could not explain the observed losses.
+
+---
+
+## 🎯 Recommendations & Decision Support
+
+- Prioritize deeper investigation of **Touring and Road Bikes**.
+- Review **selling price relative to standard cost** for below-cost transactions.
+- Evaluate potential pricing and cost changes through controlled sensitivity analysis.
+- Monitor reseller and territory **profitability alongside revenue**.
+- Track **gross profit, gross margin, below-cost exposure, and pricing exceptions** over time.
+- Use the Power BI dashboard as an ongoing profitability-monitoring and decision-support framework.
+
+> Sensitivity scenarios do not model demand elasticity, competitive response, customer retention, or other commercial constraints and should therefore be evaluated alongside broader business considerations before implementation.
+
+---
+
+## 📈 Business Analysis Presentation
+
+This management-focused presentation connects the analytical findings to business risks, diagnostic hypotheses, sensitivity analysis, corrective actions, and decision-support considerations.
+
+▶️ **[Watch Business Analysis Presentation on YouTube](https://youtu.be/XNNkMtFnFeA?si=PdrLRdoJvU-pKReE)**
+
+📥 **View the `/presentation` folder for the project presentation.**
+
+---
+
+## 📂 Repository Structure
+
+```text
+adventureworks-sales-finance-analytics/
+│
+├── sql/
+│   ├── 01_Data_Exploration_and_Model.sql
+│   ├── 02_Sales_and_Profitability_KPIs.sql
+│   ├── 03_Product_and_Category_Profitability.sql
+│   ├── 04_Price_vs_Cost_Analysis.sql
+│   ├── 05_Reseller_and_Territory_Performance.sql
+│   ├── 06_Promotion_and_Time_Trend_Analysis.sql
+│   ├── 07_Volume_and_Exception_Analysis.sql
+│   └── 08_Executive_Summary.sql
+│
+├── excel/
+│   └── AdventureWorks_Sales_Finance_Analysis.xlsx
+│
+├── power-bi/
+│   └── AdventureWorks_Sales_Profitability_Analysis.pbix
+│
+├── images/
+│   ├── executive-overview.png
+│   ├── pricing-profitability.png
+│   ├── territory-reseller.png
+│   ├── product-profitability.png
+│   ├── product-detail.png
+│   └── data-model.png
+│
+├── presentation/
+│   └── AdventureWorks_Sales_Profitability_Business_Analysis_Tina_Vo.pptx
+│
+└── README.md
