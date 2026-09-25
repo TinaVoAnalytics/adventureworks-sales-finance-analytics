@@ -13,6 +13,6 @@ The report uses DAX measures, comparable-period analysis, slicers, bookmarks, fi
 
 ## Power BI File
 
-`AdventureWorks_Sales_Profitability_Analysis.pbix`
+`AdventureWorks_Reseller_Sales_Profitability_Analysis_Tina_Vo.pbix`
 
 > Download the PBIX file to explore the complete interactive dashboard in Microsoft Power BI Desktop.
