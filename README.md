@@ -42,19 +42,22 @@ On a comparable **January–November basis**, 2013 revenue increased **31.52%** 
 
 ---
 
+
 ## 🗃️ Dataset & Analytical Model
 
 The project uses the **AdventureWorksDW2022** data warehouse, with `FactResellerSales` as the primary transactional fact table.
 
+The analytical model follows a dimensional structure that connects reseller sales transactions with product, date, reseller, and geographic dimensions to support financial and profitability analysis across multiple levels of detail.
+
 ### Core Tables
 
-- `FactResellerSales`
-- `DimDate`
-- `DimProduct`
-- `DimProductSubcategory`
-- `DimProductCategory`
-- `DimReseller`
-- `DimSalesTerritory`
+- `FactResellerSales` — reseller sales transactions, quantities, revenue, pricing, discounts, and product costs
+- `DimDate` — calendar and time-based analysis
+- `DimProduct` — individual product attributes
+- `DimProductSubcategory` — product subcategory classification
+- `DimProductCategory` — high-level product category classification
+- `DimReseller` — reseller/customer attributes
+- `DimSalesTerritory` — sales territory and geographic analysis
 
 ### Dataset Profile
 
@@ -65,6 +68,18 @@ The project uses the **AdventureWorksDW2022** data warehouse, with `FactReseller
 - Date range: **December 29, 2010 – November 29, 2013**
 
 > **Comparable-Period Note:** The available 2013 reseller-sales data ends in November. Therefore, January–November periods were used for the primary 2012–2013 year-over-year diagnostic comparison.
+
+### Power BI Data Model
+
+The Power BI model connects the primary reseller-sales fact table to supporting dimensions for product, reseller, territory, and date analysis. This structure supports consistent KPI calculations and interactive filtering across the dashboard.
+
+![Power BI Data Model](dashboard/05_Data_Model.png)
+
+### Relationship Details
+
+The relationship view documents the connections used across the analytical model and provides additional technical evidence of how the fact and dimension tables support cross-filtering and dashboard analysis.
+
+![Power BI Relationship Details](dashboard/06_Relationship_Details.png)
 
 ---
 
@@ -164,18 +179,22 @@ The Power BI solution translates the financial analysis into four primary manage
 ### 1. Executive Overview
 
 Provides an executive-level view of revenue, gross profit, gross margin, and comparable-period financial performance.
+![Executive Overview](dashboard/01_Executive_Overview.png)
 
 ### 2. Pricing & Profitability
 
 Evaluates pricing effectiveness, below-cost exposure, gross margin, and promotion performance.
+![Pricing and Profitability](dashboard/02_Pricing_Profitability.png)
 
 ### 3. Territory & Reseller
 
 Compares geographic and reseller performance across both revenue and profitability measures.
+![Territory and Reseller Analysis](dashboard/03_Territory_Reseller.png)
 
 ### 4. Product Profitability
 
 Moves from category to subcategory and individual-product analysis to identify where profitability pressure is concentrated.
+![Product Profitability](dashboard/04_Product_Profitability.png)
 
 ### Interactive Analysis
 
